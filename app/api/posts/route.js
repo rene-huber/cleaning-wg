@@ -10,7 +10,9 @@ import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
   try {
-    const tasks = await prisma.post.findMany();
+    const tasks = await prisma.task.findMany({orderBy: {
+      startTime: 'desc', 
+    },});
 
     return new NextResponse(JSON.stringify({ tasks }, { status: 200 }));
   } catch (err) {
