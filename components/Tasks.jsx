@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {timeSince }from "@/utils/time";
 
 const getData = async () => {
-    const res = await fetch(`http://localhost:3000/api/posts`, {
+    const res = await fetch(`/api/posts`, {
         cache: "no-store", revalidate: false
     });
 
