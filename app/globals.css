@@ -1,96 +1,82 @@
 :root {
-  --bg: rgb(118, 118, 118);
-  --textColor: black;
-  --softBg: #705e5e;
-  --softTextColor: #626262;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  --primary-color: #007bff; /* Color principal para botones y enlaces */
+  --background-color: #f8f9fa; /* Color de fondo para el formulario */
+  --text-color: #495057; /* Color de texto principal */
+  --border-radius: 0.25rem; /* Radio de borde para inputs y botones */
+  --border-color: #ced4da; /* Color de borde para inputs */
 }
 
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  background: #aaaaaa;
-}
-body.dark {
-  color: #dfdfdf;
-  background: #757575;
-}
-
-body.light {
-  
-  color: #d5d5d5;
-  background: #000;
-}
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+margin: 0;
+padding: 0;
 }
 
-.dark {
-  --bg: #0f172a;
-  --textColor: #ddd;
-  --softBg: #1f273a;
-  --softTextColor: #a6a6a6;
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
 }
 
-.light {
-  --bg: rgb(70, 70, 70);
-  --textColor: black;
-  --softBg: #494949;
-  --softTextColor: #626262;
+fieldset {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius);
 }
 
-.container {
-  min-height: 100vh;
-  background-color: var(--bg);
-  color: var(--textColor);
+legend {
+  padding: 0 10px;
+  width: auto;
+  color: var(--primary-color);
 }
 
-.wrapper {
-  max-width: 1536px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 80px;
-  padding-right: 80px;
+label {
+  display: block;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1536px) {
-  .wrapper {
-    max-width: 1366px;
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: rgb(23, 103, 177);
+}
+
+/* Estilo adicional para mejorar la visualización en móviles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
   }
-}
-@media screen and (max-width: 1280px) {
-  .wrapper {
-    max-width: 1024px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    max-width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrapper {
-    max-width: 640px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .wrapper {
-    max-width: 475px;
-  }
-}
 
-.ql-container{
-  font-size: 28px !important;
-}
-
-.quill > .ql-container > .ql-editor.ql-blank::before{
-  color: #70702f;
+  form {
+    padding: 15px;
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {timeSince }from "@/utils/time";
+import style from "@/app/page.module.css"
 
 const getData = async () => {
     const res = await fetch(`/api/posts`, {
@@ -33,9 +34,9 @@ const Tasks = () => {
 
     return (
         <div>
-            <div>
+            <div >
                 {posts?.map((item) => (
-                    <div key={item.id}>
+                    <div key={item.id} className={ style.task }>
                         <p>{timeSince(item.startTime)}</p>
                         <h2>{item.name}</h2>
                         <p>{item.assignedTo}</p>

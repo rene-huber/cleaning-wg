@@ -3,7 +3,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding:0 6rem;
   min-height: 100vh;
 }
 
+.task{
+  border: 1px solid #ebebeb;
+    text-align: center;
+    border-radius: 11px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-bottom: 15px;
+
+    padding: 0 33px 0 33px ;
+}
